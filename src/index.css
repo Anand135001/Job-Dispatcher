@@ -7,4 +7,9 @@
 }
 body{
     background-color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#task-List::-webkit-scrollbar{
+    display: none;
 }
