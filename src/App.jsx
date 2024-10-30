@@ -1,6 +1,6 @@
 import AdminDashboard from './Components/Dashboard/AdminDashboard';
 import EmployeeDashboard from './Components/Dashboard/EmployeeDashboard';
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Login from "./Components/Auth/Login"
 import { AuthContext } from './Context/AuthProvider';
 // import { getLocalStorage, setLocalStorage } from "./utils/localStorage";
@@ -14,18 +14,23 @@ const App = () => {
   // getLocalStorage()
 
 
-  // useEffect(() => {
-  //   if(authdata){
-  //     const loggedInUser =  localStorage.getItem('loggedInUser');
-  //     if(loggedInUser){
-  //       setUser(loggedInUser.role);
-  //     }
-  //   }
-  // }, [authdata])
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem('loggedInUser')
+    
+    if(loggedInUser){
+       const userData = JSON.parse(loggedInUser);
+       setUser(userData.role);
+       setLoggedInUser(userData.data);
+    }
+    
+  }, [])
+
+
 
   const handleLogin = (email, password) =>{
       
     if(email == 'admin@me.com' && password == '123'){
+        
         setUser('admin');
         localStorage.setItem('loggedInUser', JSON.stringify({role:'admin'}));
       }

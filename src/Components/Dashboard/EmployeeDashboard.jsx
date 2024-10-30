@@ -1,6 +1,6 @@
 import Header from "../EmployeeDashboard/Header";
 import TaskListNumber from "../EmployeeDashboard/TaskListNumber";
-import TaskList from "../TaskList/TaskList";
+import TaskList from "../EmployeeDashboard/TaskList";
 
 const EmployeeDashboard = ({data}) => {
   
@@ -8,7 +8,7 @@ const EmployeeDashboard = ({data}) => {
     <div className="p-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 h-screen text-white">
       <Header data={data} />
       <TaskListNumber data={data.taskCount} />
-      <TaskList data={data} />
+      <TaskList data={data.tasks} />
     </div>
   );
 }
