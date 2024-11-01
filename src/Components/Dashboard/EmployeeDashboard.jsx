@@ -7,7 +7,7 @@ const EmployeeDashboard = ({data}) => {
   return (
     <div className="p-10 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 h-screen text-white">
       <Header data={data} />
-      <TaskListNumber data={data.taskCount} />
+      <TaskListNumber data={data.taskCount}/>
       <TaskList data={data.tasks} />
     </div>
   );

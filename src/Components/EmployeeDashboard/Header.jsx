@@ -9,7 +9,7 @@ const Header = () => {
     // }
 
     const logOut = () => {
-      localStorage.setItem('loggedInUser', '');
+      localStorage.setItem('currentUser', '');
       window.location.reload();
     }
 

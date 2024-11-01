@@ -60,7 +60,7 @@
 
 const TaskListNumber = ({data}) => {
 
-   return (
+  return (
      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
        <div className="flex flex-col items-center bg-gray-700 p-6 rounded-lg shadow-lg text-white">
          <h2 className="text-4xl font-bold text-teal-300">{data.newTask}</h2>
@@ -76,7 +76,7 @@ const TaskListNumber = ({data}) => {
        </div>
        <div className="flex flex-col items-center bg-gray-700 p-6 rounded-lg shadow-lg text-white">
          <h2 className="text-4xl font-bold text-teal-300">{data.failed}</h2>
-         <span className="text-lg mt-2 text-gray-300">Pending Review</span>
+         <span className="text-lg mt-2 text-gray-300">Failed</span>
        </div>
      </div>
    );
